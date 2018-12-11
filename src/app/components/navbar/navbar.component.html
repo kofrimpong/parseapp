@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" (click)="backClicked()" [hidden]="!showBackButton">
+    <i class="fa fa-chevron-left text-white"></i>
+  </a>
+
+  <div class="navbar-nav mr-auto h4 text-white mx-auto">
+    {{title}}
+  </div>
+  <span class="navbar-text">
+    <a class="btn btn-link" (click)="logout()">Logout</a>
+  </span>
+</nav>

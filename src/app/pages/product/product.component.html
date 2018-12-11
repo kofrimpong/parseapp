@@ -1,0 +1,22 @@
+<app-navbar title="Products" (click)="backClicked()" showBackButton="true"></app-navbar>
+<div class="container">
+  <div *ngIf="loading" text-center>
+
+  </div>
+  <div *ngIf="showEmpty" padding>
+    No products available
+  </div>
+  <div *ngIf="products$ | async as products">
+    <div class="row">
+      <div class="card" *ngFor="let item of products" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{item.get('name')}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Price: {{item.get('price')}}</h6>
+          <div class="card-text">
+            <p>Quantity Left: {{item.get('quantityLeft')}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

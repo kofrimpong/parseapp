@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+.card-deck {
+    column-count: 4;
+  }
+  .loginform{
+    background: #9CECFB;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+  .card-signin {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    .card-title {
+        margin-bottom: 1rem;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    .card-body {
+        padding: 3rem;
+    }
+    input {
+        border-radius: 2rem;
+      }
+    }
+    .btn{
+        border-radius: 5rem;
+    }
+    .btn-link{
+        padding:0;
+        vertical-align: baseline;
+        text-decoration: none;
+    }
+}
+a{
+    cursor: pointer;
+}
