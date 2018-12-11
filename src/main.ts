@@ -9,6 +9,7 @@ if (environment.production) {
   enableProdMode();
 }
 Parse.initialize(environment.ApplicationId, environment.RestKey);
+//@ts-ignore
 Parse.serverURL = environment.serverURL;
 
 platformBrowserDynamic().bootstrapModule(AppModule)
