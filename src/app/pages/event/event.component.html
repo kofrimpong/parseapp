@@ -7,18 +7,17 @@
 
   </div>
   <div *ngIf="!loading">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-6 mx-auto">
       <a class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let item of items"
         (click)="itemClicked(item)">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">{{item.get('name')}}</h5>
-          <small>{{item.get('startDate') | date:"MM/dd/yy"}} - {{item.get('endDate') |
-            date:"MM/dd/yy"}}</small>
+          <small>From: {{item.get('startDate') | date:"dd/MMM/yyyy"}} - To: {{item.get('endDate') |
+            date:"dd/MMM/yyyy"}}</small>
         </div>
         <p class="mb-0">Location Name: {{item.get('locationName')}}</p>
         <p class="mb-0">City: {{item.get('city')}}</p>
         <p class="mb-0">Address: {{item.get('address')}}</p>
-        <small>Donec id elit non mi porta.</small>
       </a>
     </div>
   </div>
